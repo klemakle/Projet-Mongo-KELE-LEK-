@@ -1,0 +1,484 @@
+/* =======================================================================
+Template Name: Dil Hospital
+Author:  SmartEye Adminpanel
+Author URI: www.smarteyeapps.com
+Version: 1.0
+coder name:Prabin Raja
+Description: This Template is created for web template
+======================================================================= */
+
+
+/* ===================================== Import Less ================================== */
+
+@font-face {
+    font-family: 'mouse-300';
+    src: url("../fonts/PT_Sans-Web-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'mouse-500';
+    src: url("../fonts/PT_Sans-Web-Bold.ttf") format("truetype");
+}
+
+
+/* ===================================== Basic CSS ================================== */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+    color: #444;
+}
+
+a:hover {
+    color: #444;
+}
+
+ul {
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+a:hover,
+a:focus,
+input,
+textarea {
+    text-decoration: none;
+    outline: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.cp {
+    cursor: pointer;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+p {
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.no-margin {
+    margin: 0px;
+}
+
+.hid {
+    display: none;
+}
+
+.top-mar {
+    margin-top: 15px;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+::placeholder {
+    color: #747f8a !important;
+    font-size: 13px;
+    opacity: .5 !important;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "mouse-500", Arial, Helvetica, sans-serif;
+}
+
+strong {
+    font-family: "mouse-500", Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: "mouse-300", Arial, Helvetica, sans-serif;
+    color: #6A6A6A;
+}
+
+.session-title {
+    padding: 30px;
+    margin: 0px;
+}
+
+.session-title h2 {
+    width: 100%;
+    text-align: center;
+}
+
+.session-title p {
+    max-width: 850px;
+    text-align: center;
+    float: none;
+    margin: auto;
+}
+
+.session-title span {
+    float: right;
+    font-style: italic;
+}
+
+.inner-title {
+    padding: 20px;
+    padding-left: 0px;
+    margin-bottom: 30px;
+}
+
+.inner-title h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-family: "slab", Arial, Helvetica, sans-serif;
+}
+
+.inner-title p {
+    width: 100%;
+    text-align: center;
+}
+
+.page-nav {
+    padding: 40px;
+    text-align: center;
+    padding-top: 160px;
+}
+
+.page-nav ul {
+    float: none;
+    margin: auto;
+}
+
+.page-nav h2 {
+    font-size: 36px;
+    width: 100%;
+    color: #444;
+}
+
+@media screen and (max-width: 600px) {
+    .page-nav h2 {
+        font-size: 26px;
+    }
+}
+
+.page-nav ul li {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.page-nav ul li i {
+    width: 30px;
+    text-align: center;
+    color: #444;
+}
+
+.page-nav ul li a {
+    color: #444;
+}
+
+.btn-success {
+    background-color: #00ab9f;
+    border-color: #00ab9f;
+}
+
+.btn-success:hover {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important;
+    box-shadow: 3px 2px 10px rgb(87, 85, 85);
+}
+
+.btn-success:active {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important;
+}
+
+.btn-success:focus {
+    background-color: #00ab9f !important;
+    border-color: #00ab9f !important;
+    box-shadow: none !important;
+}
+
+.btn-info {
+    background-color: #4f6dcd;
+    border-color: #4f6dcd;
+}
+
+.btn-info:hover {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important;
+}
+
+.btn-info:active {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important;
+}
+
+.btn-info:focus {
+    background-color: #4f6dcd !important;
+    border-color: #4f6dcd !important;
+    box-shadow: none !important;
+}
+
+.personnel {
+    color: #f65e12b0;
+}
+
+.personnel:hover {
+    color: #9c3a09d1;
+}
+
+.btn-personnel {
+    background-color: #f65e12b0;
+    border-radius: 5%;
+    color: #F8F8F8;
+}
+
+.btn-personnel:hover {
+    transition-delay: 0.15s;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+    transition-property: initial;
+    box-shadow: 3px 2px 15px #434242;
+    border-collapse: collapse;
+}
+
+.btn-personnel:active {
+    transition-delay: 0.15s;
+    transition-duration: 0.95s;
+    transition-timing-function: linear;
+    transition-property: initial;
+    background-color: #b3430ada !important;
+    color: whitesmoke;
+    border-color: #FFF !important;
+    border-collapse: collapse;
+    ;
+}
+
+.btn-personnel:focus {
+    transition-delay: 0.15s;
+    transition-duration: 0.25s;
+    transition-timing-function: linear;
+    transition-property: initial;
+    border-color: #FFF !important;
+    border-collapse: collapse;
+}
+
+.btn-impersonnel {
+    background-color: #d95b1cdd;
+    border-color: #fff;
+    color: #f3f3f3;
+    border-radius: 5%;
+}
+
+.btn-impersonnel:hover {
+    transform-origin: left;
+    transition-delay: 0.15s;
+    transition-duration: .45s;
+    transition-timing-function: ease;
+    transition-property: initial;
+    background-color: #d34b08e4 !important;
+    color: rgb(255, 255, 255);
+    border-color: #e5956e !important;
+    border-collapse: collapse;
+    box-shadow: 3px 3px 10px 3px #7a7777;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border: 2px solid #00a8df;
+}
+
+.btn-light {
+    background-color: #FFF;
+    color: #3F3F3F;
+}
+
+.btn-lighti {
+    width: 160px;
+    height: 40px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgba(141, 64, 13, 0.862);
+    background-color: #514d4d96;
+}
+
+.collapse.show {
+    display: block !important;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 2px solid #b07545b2 !important;
+}
+
+.form-control {
+    background-color: #F8F8F8;
+    margin-bottom: 20px;
+}
+
+.form-control:focus {
+    background-color: #FFF;
+    border-color: rgb(204, 204, 204);
+}
+
+@media screen and (max-width: 1199px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+
+/* ===================================== Header CSS ================================== */
+
+body {
+    background-color: #FFF;
+}
+
+.title {
+    padding: 50px;
+    text-align: center;
+}
+
+.title h2 {
+    font-size: 42px;
+}
+
+.roji {
+    padding: 20px;
+}
+
+.roji p {
+    text-align: justify;
+    text-indent: 25px;
+    margin-top: 20px;
+}
+
+.roji h3 {
+    text-align: center;
+}
+
+.btndiv {
+    margin: 40% 45%;
+    padding: 20%;
+    text-align: center;
+}
+
+.btndiv .btn {
+    width: 170px;
+    padding: 10px;
+    font-family: "mouse-500", Arial, Helvetica, sans-serif;
+}
+
+.tem-doc {
+    width: 400px;
+}
+
+.temp-model {
+    border-radius: 10px;
+    margin-top: 20%;
+}
+
+.temp-model .modal-header {
+    text-align: center;
+    display: flow-root;
+    border-bottom: 0px;
+}
+
+.temp-model .modal-header h5 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: -18px;
+    font-size: 30px;
+}
+
+.temp-model .modal-header .close {
+    position: absolute;
+    top: 9px;
+    right: 17px;
+}
+
+.temp-model .modal-header p {
+    font-size: 14px;
+    padding: 0px 20px;
+}
+
+.temp-model .form-ro {
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.temp-model .form-ro input {
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+
+.temp-model .btn {
+    width: 100%;
+    border-radius: 50px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.temp-model .modal-footer {
+    display: flow-root;
+    background-color: #00ab9f;
+    text-align: center;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.temp-model .modal-footer p {
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+    margin-bottom: 15px;
+}
+
+.temp-model .modal-footer .btn {
+    width: 40px;
+}
+
+::placeholder {
+    color: #747f8a !important;
+    font-size: 16px;
+    opacity: .5 !important;
+}
+
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Kele LEK</title>
+
+    <!-- <link rel="shortcut icon" href="assets/images/fav.jpg"> -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawsom-all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+</head>
+
+<body class="h-100">
+    <div class="container-fluid">
+        <div class="container">
+
+            <div class="row no-margin roji">
+                <!-- <div class="col-sm-6">
+
+                    <div class="btndiv">
+                        <button onclick="userlogin()" class="btn btn-impersonnel">
+                             <i class="fas fa-lock-open"></i> Click to Login</button>
+                    </div>
+
+                </div> -->
+                <div class="col-sm-6">
+
+                    <div class="btndiv">
+                        <button onclick="signup()" class="btn btn-impersonnel">
+                            <i class="fas fa-user-plus"></i> Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="signup" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog tem-doc" role="document">
+                <div class="modal-content temp-model">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Inscription</h2> <br>
+                        <h6>Remplissez les champs ci-dessous pour vous inscrire</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <form method="POST" action="#" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="row form-ro">
+                                <input placeholder="Nom d'utilisateur..." class="form-control" type="text" name="username" required value="<%= typeof username != 'undefined' ? username : ''  %>">
+                            </div>
+                            <div class="row form-ro">
+                                <input placeholder="Email..." class="form-control" type="email" name="email" required value="<%= typeof email != 'undefined' ? email : ''  %>">
+                            </div>
+                            <div class="row form-ro">
+                                <input placeholder="Prénom..." class="form-control" type="text" name="prenom" required value="<%=  typeof prenom != 'undefined' ? prenom : '' %>">
+                            </div>
+                            <div class="row form-ro">
+                                <input placeholder="Nom..." class="form-control" type="text" name="nom" required value="<%=  typeof nom != 'undefined' ? nom : '' %>">
+                            </div>
+                            <div class="row form-ro">
+                                <input placeholder="Mot de passe..." class="form-control" type="password" name="password" required>
+                            </div>
+                            <div class="row form-ro">
+                                <input placeholder=" Confirmer mot de passe..." class="form-control" type="password" name="password1" required>
+                            </div>
+                            <div class="row form-ro">
+                                <input placeholder="Profile..." class="form-control " type="file" name="photo_profile" id="photo_profile">
+                            </div>
+                            <div class="row form-ro">
+                                <button class="btn btn-impersonnel" type="submit">S'inscrire</button>
+                            </div>
+
+
+                        </div>
+                    </form>
+                    <div class="m-1">
+                        <% if(typeof errors != 'undefined'){ %>
+                            <% errors.forEach(function(error) { %>
+                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                    <%= error.message %>
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                                </div>
+                                <% }); %>
+                                    <% } %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+<script>
+    $(document).ready(function() {
+        signup();
+    })
+
+    function userlogin() {
+        $("#signup").modal('hide');
+        $("#login").modal('show');
+    }
+
+    function signup() {
+        $("#login").modal('hide');
+        $("#signup").modal('show');
+    }
+</script>
+
+</html>

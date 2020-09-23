@@ -1,0 +1,70 @@
+.insert-data-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(22, 19, 17, 0.8);
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    z-index: 99999;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.insert-data-form.show {
+    transform-origin: left;
+    opacity: 0.95;
+    width: 100%;
+    display: flex;
+    animation-name: formulairePost;
+    animation-duration: 1.15s;
+    animation-direction: normal;
+    animation-timing-function: ease-out;
+}
+
+@keyframes formulairePost {
+    from {
+        width: 0;
+        opacity: 0.2;
+    }
+    to {
+        width: 100%;
+        opacity: 0.95;
+    }
+}
+
+.test {
+    background-color: rgba(48, 46, 46, 0.85);
+}
+
+.areatest {
+    background-color: rgba(255, 255, 255, 0.854);
+}
+
+#modifier {
+    color: #da5213b2;
+    text-decoration: none;
+    text-transform: none;
+}
+
+#modifier:hover {
+    color: #b44816c9;
+    font-weight: bold;
+    font-size: large;
+}
+
+#bouton-fermer {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+#bouton-fermer:hover {
+    color: rgba(221, 123, 87, 0.815);
+    font-size: 2.5rem;
+}
