@@ -1,5 +1,11 @@
 node_modules
 
+
+public
+
+views
+
+
 package-lock.json
 
 pnpm-lock.yaml
@@ -7,9 +13,6 @@ pnpm-lock.yaml
 scratch
 
 uploads
-
-views
-
 
 public
 
