@@ -298,10 +298,10 @@ body {
 }
 
 .btn-impersonnel {
-    background-color: #d95b1cdd;
+    background-color: #ec7437f6;
     border-color: #fff;
     color: #f3f3f3;
-    border-radius: 5%;
+    border-radius: 30px;
 }
 
 .btn-impersonnel:hover {
