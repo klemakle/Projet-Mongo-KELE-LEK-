@@ -1,11 +1,9 @@
 const router = require('express').Router();
-const Pub = require('../models/pub')
-const User = require('../models/user')
-const verification = require('../config/check_token')
+const Pub = require('../models/pub');
+const User = require('../models/user');
+const verification = require('../config/check_token');
 
 const est_connecte = require('../config/is_connect');
-
-
 
 
 

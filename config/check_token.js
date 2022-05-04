@@ -6,7 +6,7 @@ module.exports = function(req, res, next) {
     if (!token) return res.status(401).redirect('/login')
     try {
         const secretToken = require('../config/key').Secret;
-        const verifie = jwt.verify(token, secretToken, { expiresIn: '90 days' });
+        const verifie = jwt.verify(token, secretToken, { expiresIn: '2 days' });
 
         req.userLogged = verifie;
         next();

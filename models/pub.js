@@ -8,17 +8,15 @@ const postSchema = new mongoose.Schema({
         max: 100,
         required: true
     },
-
     description: {
         type: String,
         required: true
     },
-
     auteur: {
         type: String,
         default: 'anonyme'
     },
-
+    
     date_post: {
         type: Date,
         default: Date.now
@@ -59,8 +57,6 @@ const postSchema = new mongoose.Schema({
         },
         required: false
     }]
-
-
 });
 
 

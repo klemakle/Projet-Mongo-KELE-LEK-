@@ -20,9 +20,9 @@
     width: 100%;
     display: flex;
     animation-name: formulairePost;
-    animation-duration: 1.15s;
+    animation-duration: 1.25s;
     animation-direction: normal;
-    animation-timing-function: ease-out;
+    animation-timing-function: linear;
 }
 
 @keyframes formulairePost {

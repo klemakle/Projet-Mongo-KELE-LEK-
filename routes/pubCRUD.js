@@ -170,7 +170,7 @@ router
             } else res.send('pas d\'id')
         } catch (error) {
             console.log(error);
-            res.status(500).send(error);
+            res.status(500).redirect(`/post/single/${id_pub}`);
         }
 
         res.redirect(`/post/single/${publica._id}`);
@@ -294,7 +294,7 @@ router.post('/update/:id', verification, (req, res) => {
 //supprimer un post
 router.get('/single/:id/supprimer', verification, (req, res) => {
     const auteur_du_post = Pub.findOne({ 'auteur': req.userLogged.username })
-    console.log(auteur_du_post)
+        //console.log(auteur_du_post)
 
     if (auteur_du_post) {
         let id_pub = req.params.id;
@@ -309,7 +309,7 @@ router.get('/single/:id/supprimer', verification, (req, res) => {
         const impossible = 'vous ne pouvez pas supprimer cette publication';
         res.render('single', { impo: impossible });
     }
-    //res.send('post supprimé');
+
 });
 
 
